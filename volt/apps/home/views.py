@@ -19,7 +19,7 @@ def index(request):
 
 @login_required(login_url="/login/")
 def index(request):
-    context = {'segment': 'index'}
+    context = {}
 
     html_template = loader.get_template('home/sj.html')
     return HttpResponse(html_template.render(context, request))
