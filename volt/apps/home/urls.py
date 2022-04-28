@@ -15,6 +15,6 @@ urlpatterns = [
     re_path(r'^.*\.*', views.pages, name='pages'),
 
     # SJ page
-    path('sj', views.pages, name='sj'),
+    path('sj/', views.pages, name='sj'),
 
 ]

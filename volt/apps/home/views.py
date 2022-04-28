@@ -22,9 +22,18 @@ def sj(request):
     context = {}
 
     html_template = loader.get_template('home/sj.html')
+    return HttpResponse(html_template.render(request, "Hello"))
     return request, "Helloooooo"
     return "Hello SJ"
 #HttpResponse(html_template.render(context, request)),
+
+@login_required(login_url="/login/")
+def data(request):
+    context = {}
+    return print("My data")
+    return HttpResponse(html_template.render(request, "Hello"))
+    return request, "Helloooooo"
+    return "Hello SJ"
 
 
 @login_required(login_url="/login/")
